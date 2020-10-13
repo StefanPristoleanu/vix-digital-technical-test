@@ -1,0 +1,1 @@
+# vix-digital-technical-test
