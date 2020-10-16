@@ -108,7 +108,7 @@ class ServiceManager extends React.Component {
 
         return <div>
                 <Header/> 
-                <Card body>Add a new service{' '}<Button variant="outline-success"  onClick={this.handleShowAdd}>Add</Button></Card>
+                <Card data-testid="add-panel" body>Add a new service{' '}<Button variant="outline-success"  onClick={this.handleShowAdd}>Add</Button></Card>
     
                 <Modal show={this.state.showAddPopup} onHide={this.handleClose}>
                 <Modal.Header closeButton>
