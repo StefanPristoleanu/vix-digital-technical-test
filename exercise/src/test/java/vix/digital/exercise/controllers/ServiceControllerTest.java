@@ -26,6 +26,7 @@ class ServiceControllerTest {
 
 	@BeforeEach
 	void setUp() {
+		//set up a test-specific database
 	}
 
 
@@ -33,6 +34,7 @@ class ServiceControllerTest {
 		ServiceController serviceController = new ServiceController(serviceRepository);
 		ResponseEntity<List<ServiceEntity>> listResponseEntity = serviceController.getServiceList();
 		assertEquals(listResponseEntity.getStatusCode(), HttpStatus.OK);
+		//assuming the db has some data from the set-up phase
 		assertThat(Objects.requireNonNull(listResponseEntity.getBody()).isEmpty(), is(false));
 	}
 
@@ -40,13 +42,24 @@ class ServiceControllerTest {
 		ServiceDTO serviceDTO = new ServiceDTO();
 		serviceDTO.setName(TEST_SERVICE_NAME);
 		serviceDTO.setUrl(TEST_SERVICE_URL);
+
+		//add a new ServiceEntity
+		//check against the 204 status code
 	}
 
 	@Test
 	void updateService() {
+		//add a ServiceEntity
+		//update the same ServiceEntity
+		//assert against code 200
+		//assert against the new fields
 	}
 
 	@Test
 	void deleteService() {
+		//add a new ServiceEntity
+		//delete the aforementioned ServiceEntity
+		//assert against code 200
+		//assert against the response List<ServiceEntity> not to contain the initial ServiceEntity
 	}
 }

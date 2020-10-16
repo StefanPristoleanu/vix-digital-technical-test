@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PollerUtilTest {
 
+	//more of a live test
+	//ideally would mock out services
+
 	@Test
 	void getStatusUnirest() {
 		PollerUtil.setup();
